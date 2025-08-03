@@ -1,0 +1,41 @@
+{
+  "name": "web-scraper-mcp",
+  "version": "1.0.0",
+  "description": "\u57fa\u4e8e MCP \u7684\u7f51\u9875\u722c\u53d6\u670d\u52a1\u5668\uff0c\u5185\u7f6e Puppeteer \u65e0\u5934\u6d4f\u89c8\u5668\u652f\u6301",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node api.js && tsc",
+    "dev": "node api.js && tsc --watch",
+    "start": "node api.js && node build/start.js",
+    "test": "node test-all-tools.js",
+    "setup:browser": "npx puppeteer browsers install chrome"
+  },
+  "keywords": [
+    "mcp",
+    "web-scraper",
+    "puppeteer",
+    "typescript",
+    "crawler"
+  ],
+  "author": "CodeBuddy",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "chrome-aws-lambda": "^10.1.0",
+    "jsdom": "^23.0.1",
+    "node-html-parser": "^6.1.12",
+    "puppeteer": "^22.15.0",
+    "puppeteer-core": "^24.15.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "turndown": "^7.1.2"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.10.4",
+    "typescript": "^5.3.3"
+  }
+}
